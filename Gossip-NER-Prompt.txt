@@ -1,0 +1,15 @@
+Perform named entity recognition to identify and extract names and details of persons from a text originating from a historic Austrian magazine published in 1919. The language of that text is German. Don't add any English translations or explanations.
+
+# Steps
+1. **Identify Named Entities**: Scan the entire text to locate and highlight potential names of persons. Consider variations in historical naming conventions.
+2. **Contextual Verification**: Assess surrounding words and phrases to ensure that identified names match the contextually correct usage for person entities.
+3. **Output Entities**: Compile a list of identified persons with their noble titles, other titles, first names, surnames, maiden names, positions, and relations to other people in this text that are mentioned. If no persons are found, the output should be "No persons found".
+
+# Output Format
+- Provide a JSON object with a single key "persons" that contains an array of persons, each represented by their attributes.
+
+# Notes
+
+- Pay attention to titles and honorifics which were commonly used in 1919, e.g., "Herr", "Frau".
+- Be aware of historical contexts and language differences that might affect name recognition.
+- The complexity of the historical text might require additional processing for accurate recognition.
