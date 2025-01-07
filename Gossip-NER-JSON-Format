@@ -1,0 +1,32 @@
+response_format={
+                "type": "json_schema",
+                "json_schema": {
+                  "name": "person_list",
+                  "strict": True,
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "persons": {
+                        "type": "array",
+                        "description": "A list of persons, each represented by their attributes.",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "noble_title": {"type": "string", "description": "Noble title of the person."},
+                            "other_title": {"type": "string", "description": "Other title the person may hold."},
+                            "first_name": {"type": "string", "description": "First name of the person."},
+                            "last_name": {"type": "string", "description": "Last name of the person."},
+                            "maiden_name": {"type": "string", "description": "Maiden name of the person, if applicable."},
+                            "position": {"type": "string", "description": "Position or role of the person."},
+                            "relation": {"type": "string", "description": "Relation of the person to other people mentioned in the text."}
+                          },
+                          "required": ["noble_title", "other_title", "first_name", "last_name", "maiden_name", "position", "relation"],
+                          "additionalProperties": False
+                        }
+                      }
+                    },
+                    "required": ["persons"],
+                    "additionalProperties": False
+                  }
+                }
+            }
